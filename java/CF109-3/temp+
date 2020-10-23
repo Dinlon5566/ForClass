@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while(sc.hasNext()){
+            int time=sc.nextInt();
+            int flag;
+            while(time!=0){
+             for(int i=2;time!=0;i++){
+                 flag=0;
+                 for(int j=2;j<i;j++){
+                     if(i%j==0){
+                         flag=1;
+                     }
+                 }
+                 if(flag==0){
+                     int num=i,outtime=0;
+                     int num1,num2=0;
+                     //retext find Start
+                     if(num<10){
+                         System.out.printf("%d",num);
+                         outtime++;
+                         time--;
+                         if(time!=0){
+                             System.out.printf(" ");
+                         }
+                     }else{
+                         int len=0;
+                         num1=num;
+                         while(num1!=0){
+                             len++;
+                             num1/=10;
+                         }
+                         num1=num;
+                         for(int s=0;i<len;s++){
+                             
+                         }
+
+                     }
+                     //retext find END
+                     time--;
+                 }
+             }
+            }
+        }
+    }
+}
