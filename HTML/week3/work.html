@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+    Made by Dinlon5566
+    2021/10/12
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- VScode defult Setting -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML表格與表單綜合練習</title>
+</head>
+
+<body>
+    <!--Table for Form-->
+    <div style="display: flex; align-items: center;">
+        <form method="GET" action="">
+            <table width=360 height="190.8" border="2">
+                <tbody>
+                    <tr>
+                        <td width="58.4" scope="col">姓名</td>
+                        <td width="100" scope="col">姓 :
+                            <input type="text" id="inputName" name="name" size="5" required>
+                        </td>
+                        <td width="132.8" scope="col">名 :
+                            <input type="text" id="inputNameB" name="nameB" size="5" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="male">性別</label></td>
+                        <td colspan="2">
+
+                            <input type="radio" id="male" name="gender" value="M" required>男
+                            <input type="radio" name="gender" id="female" value="F"> 女
+                            <input type="radio" name="gender" id="other" value="O">其他
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="brithMoon">出生月</label></td>
+                        <td colspan="2">
+                            <span>
+                       <select name="brithMoon" id="brightMoon" style="width: 100px;">
+                            <!--User can't choice hidden option-->
+                            <option value="-1" hidden>請選擇月份</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                       </select>
+                    </span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="interest">興趣</label></td>
+                        <td colspan="2">
+                            <!--  Maybe someone is not interested. : (  -->
+                            <input type="checkbox" name="interest" id="playBall" value="ball">玩球
+                            <input type="checkbox" name="interest" id="playGame" value="game">遊戲
+                            <input type="checkbox" name="interest" id="sleep" value="sleep">睡覺
+                            <input type="checkbox" name="interest" id="study" value="study">學習
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="pwd">密碼</label></td>
+                        <td><input type="password" name="pwd" id="passwd" placeholder="Set Your Password" size="13" required></td>
+                        <!-- FJU CIS img -->
+                        <td rowspan="2" style="height: 150px; width: 150px;"><img src="https://www.fju.edu.tw/showImg/subLabelImg/1_5_19_1.jpg" alt="輔大校徽" width="120" height="120" style="display: block ; margin: auto;"></td>
+                    </tr>
+                    <tr>
+                        <td style="font-size: small;"><label for="pwd2">密碼驗證</label></td>
+                        <td><input type="password" name="pwd2" id="passwd2" placeholder="Password Verify" size="13" required></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" align="center">
+                            <button type="submit">送出註冊資料</button>
+                            <button type="reset">重新填寫</button>
+
+                            <!-- : ) -->
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <!--Form End-->
+
+</body>
+
+</html>

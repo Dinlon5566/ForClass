@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>表單</h1>
+    <form action="" method="GET">
+        <label for="myName">姓名 : </label> <input type="text" name="InputName" id="myName" minlength="2" maxlength="10" size="20" placeholder="press your name" required>
+        <br />
+        <label for="phone">電話 : </label>
+        <input type="text" id="phone" name="phoneNumber" minlength="5" required>
+        <br />
+        <label for="age">年齡 : </label>
+        <input type="number" name="age" id="age" value="18" min="12" max="60">
+        <br>
+        <label for="email">電郵 : </label>
+        <input type="email" name="email" id="email" required>
+        <br />
+        <label for="gender">性別 : </label>
+        <input type="radio" id="male" name="gender" value="M" required checked>M
+        <input type="radio" name="gender" id="female" value="F">F
+        <input type="radio" name="gender" id="other" value="O">O
+        <input type="radio" name="gender" id="noe" value="O">N
+
+        <br>
+        <input type="checkbox" id="desMail" name="disMail" value="1" checked>
+        <label for="desMail">訂閱郵件</label>
+        <br>
+        <br>
+        <label for="passwd">密碼 : </label>
+        <br>
+        <input type="password" name="pwd" id="passwd" minlength="8" maxlength="16" placeholder="Press password" required>
+        <br>
+        <input type="password" name="pwd2" placeholder="Press passwd again" required>
+        <br>
+
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+
+        <p>----</p>
+        <label for="another">備註 : </label>
+        <input type="text" id="another" name="otherMsg" placeholder="Something?">
+    </form>
+</body>
+
+</html>
