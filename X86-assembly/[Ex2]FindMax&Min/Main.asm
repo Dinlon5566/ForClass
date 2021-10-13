@@ -15,53 +15,9 @@ minstr byte "Min : ",0
 
 nums sdword 200 dup(0)
 datacount sdword ?
-numsgap byte type nums
 
 
 .code
-
-findmax proc
-	mov esi,offset nums
-	mov ebx,0
-	mov bl,numsgap
-	mov ecx,datacount
-	
-	L1:
-		mov eax,[esi]
-		jmp returnL2
-	L2:
-		add esi,ebx
-		cmp [esi],eax
-		jg L1
-		returnL2:
-	loop L2
-
-	mov maxnum,eax
-
-	ret
-findmax endp
-
-findmin proc
-	mov esi,offset nums
-	mov ebx,0
-	mov bl,numsgap
-	mov ecx,datacount
-	
-	L1:
-		mov eax,[esi]
-		jmp returnL2
-	L2:
-		add esi,ebx
-		cmp [esi],eax
-		jl L1
-		returnL2:
-	loop L2
-
-	mov minnum,eax
-
-	ret
-findmin endp
-
 main proc
 	
 	call readint
@@ -69,7 +25,7 @@ main proc
 	mov ecx,eax
 	mov esi,offset nums
 	mov ebx,0
-	mov bl,numsgap
+	mov bl,type nums
 
 	;input arr
 	makearr:
@@ -78,6 +34,10 @@ main proc
 		add esi,ebx
 		loop makearr
 	
+	;set function regedit
+	mov ecx,datacount
+	mov esi,offset nums
+
 	;find function
 	call findmax
 	call findmin
@@ -86,7 +46,7 @@ main proc
 	mov edx,offset minstr
 	mov eax,minnum
 	call writestring
-	call writeint		;Can't use writedec : (
+	call writeint		
 	call crlf
 	mov edx,offset maxstr
 	mov eax,maxnum
@@ -96,5 +56,48 @@ main proc
 
 	invoke ExitProcess,0
 main endp
+
+
+findmax proc
+	
+	pushad
+	
+L1:
+	mov eax,[esi]
+	jmp returnL2
+L2:
+	add esi,ebx
+	cmp [esi],eax
+	jg L1
+returnL2:
+	loop L2
+
+	mov maxnum,eax
+
+	popad
+
+	ret
+findmax endp
+
+findmin proc
+	
+	pushad
+	
+L1:
+	mov eax,[esi]
+	jmp returnL2
+L2: 
+	add esi,ebx
+	cmp [esi],eax
+	jl L1
+returnL2:
+	loop L2
+
+	mov minnum,eax
+
+	popad
+
+	ret
+findmin endp
 
 end main
