@@ -1,0 +1,93 @@
+h1 {
+    background-color: darkgreen;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    transition: all 0.25s ease;
+}
+
+h1:hover {
+    background-color: darkgreen;
+    color: darkgrey;
+    transform: rotate(3deg);
+}
+
+#endbar {
+    background-color: white;
+    height: 600px;
+}
+
+div.container {
+    background-color: black;
+    width: 600px;
+    height: 400px;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+}
+
+.box1 {
+    background-color: aqua;
+}
+
+.box11 {
+    position: relative;
+    background-color: chocolate;
+    left: 150px;
+    top: -180px;
+    z-index: 1;
+    transition: all 1s ease;
+}
+
+div.box.box11:hover {
+    transform: translate(150px, 200px);
+}
+
+.box2 {
+    background-color: blueviolet;
+    position: relative;
+    left: 100px;
+    top: -300px;
+    z-index: 2;
+}
+
+.box3 {
+    position: absolute;
+    background-color: red;
+    top: 200px;
+    right: 0px;
+}
+
+.box4 {
+    background-color: peachpuff;
+    position: fixed;
+    right: 20px;
+    top: 50px;
+}
+
+#copyright {
+    background-color: gray;
+    color: aliceblue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: fixed;
+    bottom: 0;
+}
+
+div.mover {
+    background-color: yellow;
+    position: relative;
+    height: 100px;
+    width: 100px;
+    border-radius: 30%;
+}
+
+@keyframes mover {
+    /*todo*/
+}
+
+table,
+th,
+td {
+    border-bottom: 2px solid grey;
+}

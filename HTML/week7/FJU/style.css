@@ -1,0 +1,32 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #c4c4c4;
+    width: 100%;
+    padding: 1rem;
+}
+
+nav {
+    background-color: #003d67;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2rem;
+    list-style-type: none;
+}
+
+nav ul li {
+    padding: 1rem 5rem;
+    font-size: medium;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}

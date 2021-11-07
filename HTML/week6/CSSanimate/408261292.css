@@ -1,0 +1,80 @@
+div.bigbox {
+    width: 350px;
+    height: 350px;
+    background-color: black;
+    overflow: hidden;
+    position: relative;
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+}
+
+.box1 {
+    top: 0px;
+    left: 0px;
+    background-color: cadetblue;
+    position: absolute;
+    border-radius: 50%;
+    animation-name: moverbox1;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moverbox1 {
+    form {
+        top: 0%;
+        left: 0%;
+        background-color: cadetblue;
+    }
+    to {
+        top: 75%;
+        left: 0%;
+        background-color: yellow;
+    }
+}
+
+.box2 {
+    background-color: blue;
+    position: absolute;
+    top: 0%;
+    left: 100px;
+    animation-name: moverbox2;
+    animation-duration: 6s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moverbox2 {
+    form {
+        background-color: blue;
+        top: 0%;
+    }
+    to {
+        background-color: red;
+        top: 70%;
+    }
+}
+
+.box3 {
+    background-color: white;
+    width: 100%;
+    height: 50px;
+    top: 100%;
+    position: relative;
+    animation-name: moverbox3;
+    animation-duration: 10s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moverbox3 {
+    form {
+        background-color: white;
+        top: 100%;
+    }
+    to {
+        background-color: gray;
+        top: 0%;
+    }
+}
