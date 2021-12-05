@@ -2,7 +2,7 @@
 ;Exercise-4: GCD 
 ;Author : 408261292
 ;
-;Calculates and print number's LCM & GCD by invoke ./gcd.asm
+;Calculates and print number's LCM & GCD with invoke ./gcd.asm
 ;------------------------------------------------
 
 INCLUDE gcd.inc
@@ -36,7 +36,7 @@ procBegin:
 	mov num2,eax
 
 	;call fuction
-	INVOKE gcd,num1,num2				;gcd(num1,num2)
+	INVOKE gcd,num1,num2					;gcd(num1,num2)
 	mov result,eax
 	call WriteDec						;output result (form eax)
 
