@@ -24,16 +24,25 @@ numberOut_end:
 	call writeString
 	add esi,4
 	loop next_out
-
+	mov esi,ptrarray
 	call crlf
-	
+
+	ret
+	arrayOutput ENDP
+
+
+outputCenter PROC,
+	ptrArray:PTR SDWORD,arraySize:DWORD,ptrBlank:PTR BYTE
+		
 	mov esi,ptrArray
 	mov eax,arraySize
 	mov ebx,2
 	mov edx,0
 	div ebx
 	mov ecx,eax
+
 toCenter:
+	;move ptr to center
 	add esi,4
 	loop toCenter
 	mov eax,[esi]
@@ -50,6 +59,7 @@ negative2:								;-
 	
 numberOut_end2:
 
+	;if arraySize==even,output [esi-4]
 	cmp edx,0
 	jne center_end
 
@@ -72,8 +82,9 @@ negative3:								;-
 numberOut_end3:
 
 center_end:
+		
+		call crlf
 
-	call crlf
-	ret
-	arrayOutput ENDP
+		ret
+	outputCenter ENDP
 END

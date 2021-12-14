@@ -36,10 +36,12 @@ data_input:
 	;input data end
 
 	;sort function by invoke 
-	INVOKE insertionSort,ADDR array,arraySize
+	INVOKE insertionSort,ADDR array,arraySize,ADDR blank
 
 	;Output array by invoke 
+	call crlf
 	INVOKE arrayOutput,ADDR array,arraySize,ADDR blank
+	INVOKE outputCenter,ADDR array,arraySize,ADDR blank
 
 	jmp proc_begin
 proc_end:
