@@ -1,0 +1,35 @@
+┌──(user01㉿kali)-[~/workspace/linuxBook/ch2]
+└─$ ./loop &
+[1] 2944
+                                                                                                                                                                                                                                             
+┌──(user01㉿kali)-[~/workspace/linuxBook/ch2]
+└─$ sar -P ALL 1 1                                                                                                                                                                                                                       1 ⚙
+Linux 5.10.0-kali3-amd64 (kali)         2022年04月14日  _x86_64_        (2 CPU)
+
+11時25分09秒     CPU     %user     %nice   %system   %iowait    %steal     %idle
+11時25分10秒     all      0.50     50.25      0.00      0.00      0.00     49.25
+11時25分10秒       0      1.01      0.00      0.00      0.00      0.00     98.99
+11時25分10秒       1      0.00    100.00      0.00      0.00      0.00      0.00
+
+平均時間：     CPU     %user     %nice   %system   %iowait    %steal     %idle
+平均時間：     all      0.50     50.25      0.00      0.00      0.00     49.25
+平均時間：       0      1.01      0.00      0.00      0.00      0.00     98.99
+平均時間：       1      0.00    100.00      0.00      0.00      0.00      0.00
+                                                                                                                                                                                                                                             
+┌──(user01㉿kali)-[~/workspace/linuxBook/ch2]
+└─$ kill 2944                                                                                                                                                                                                                            1 ⚙
+                                                                                                                                                                                                                                             
+[1]  + terminated  ./loop
+┌──(user01㉿kali)-[~/workspace/linuxBook/ch2]
+└─$ sar -P ALL 1 1
+Linux 5.10.0-kali3-amd64 (kali)         2022年04月14日  _x86_64_        (2 CPU)
+
+11時25分25秒     CPU     %user     %nice   %system   %iowait    %steal     %idle
+11時25分26秒     all      0.51      0.00      0.51      0.00      0.00     98.98
+11時25分26秒       0      0.00      0.00      1.01      0.00      0.00     98.99
+11時25分26秒       1      1.02      0.00      0.00      0.00      0.00     98.98
+
+平均時間：     CPU     %user     %nice   %system   %iowait    %steal     %idle
+平均時間：     all      0.51      0.00      0.51      0.00      0.00     98.98
+平均時間：       0      0.00      0.00      1.01      0.00      0.00     98.99
+平均時間：       1      1.02      0.00      0.00      0.00      0.00     98.98

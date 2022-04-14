@@ -1,0 +1,38 @@
+┌──(user01㉿kali)-[~/workspace/linuxBook/ch2]
+└─$ cc -o ppidloop ppidloop.c
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+┌──(user01㉿kali)-[~/workspace/linuxBook/ch2]
+└─$ ./ppidloop&                                                                                                                                                                                                                        130 ⨯
+[1] 1454
+                                                                                                                                                                                                                                             
+┌──(user01㉿kali)-[~/workspace/linuxBook/ch2]
+└─$ sar -P ALL 1 1                                                                                                                                                                                                                       1 ⚙
+Linux 5.10.0-kali3-amd64 (kali)         2022年04月14日  _x86_64_        (2 CPU)
+
+15時16分11秒     CPU     %user     %nice   %system   %iowait    %steal     %idle
+15時16分12秒     all      0.00     34.00     16.00      0.00      0.00     50.00
+15時16分12秒       0      0.00      0.00      0.00      0.00      0.00    100.00
+15時16分12秒       1      0.00     68.00     32.00      0.00      0.00      0.00
+
+平均時間：     CPU     %user     %nice   %system   %iowait    %steal     %idle
+平均時間：     all      0.00     34.00     16.00      0.00      0.00     50.00
+平均時間：       0      0.00      0.00      0.00      0.00      0.00    100.00
+平均時間：       1      0.00     68.00     32.00      0.00      0.00      0.00
+                                                                                                                                                                                                                                             
+┌──(user01㉿kali)-[~/workspace/linuxBook/ch2]
+└─$ kill 1454                                                                                                                                                                                                                            1 ⚙
+[1]  + terminated  ./ppidloop                                                                                                                                                                                                                
+
+┌──(user01㉿kali)-[~/workspace/linuxBook/ch2]
+└─$ sar -P ALL 1 1
+Linux 5.10.0-kali3-amd64 (kali)         2022年04月14日  _x86_64_        (2 CPU)
+
+15時16分20秒     CPU     %user     %nice   %system   %iowait    %steal     %idle
+15時16分21秒     all      0.00      0.00      0.00      0.00      0.00    100.00
+15時16分21秒       0      0.00      0.00      0.00      0.00      0.00    100.00
+15時16分21秒       1      0.00      0.00      0.00      0.00      0.00    100.00
+
+平均時間：     CPU     %user     %nice   %system   %iowait    %steal     %idle
+平均時間：     all      0.00      0.00      0.00      0.00      0.00    100.00
+平均時間：       0      0.00      0.00      0.00      0.00      0.00    100.00
+平均時間：       1      0.00      0.00      0.00      0.00      0.00    100.00

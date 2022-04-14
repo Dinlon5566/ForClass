@@ -1,0 +1,12 @@
+┌──(user01㉿kali)-[~/workspace/linuxBook/ch2]
+└─$ ldd /bin/echo
+        linux-vdso.so.1 (0x00007ffde6df0000)
+        libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f3288d9d000)
+        /lib64/ld-linux-x86-64.so.2 (0x00007f3288f86000)
+                                                                                                                                                                                                                                             
+┌──(user01㉿kali)-[~/workspace/linuxBook/ch2]
+└─$ ldd ppidloop 
+        linux-vdso.so.1 (0x00007fff2d9dd000)
+        libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x00007f8d0f433000)
+        /lib64/ld-linux-x86-64.so.2 (0x00007f8d0f615000)
+                                                             

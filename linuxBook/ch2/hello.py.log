@@ -1,0 +1,884 @@
+execve("/usr/bin/python3", ["python3", "./hello.py"], 0x7ffcff5b4d68 /* 54 vars */) = 0
+brk(NULL)                               = 0xd23000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (沒有此一檔案或目錄)
+openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=86516, ...}) = 0
+mmap(NULL, 86516, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f4c0e56f000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libpthread.so.0", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0|\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=143184, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4c0e56d000
+mmap(NULL, 132176, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f4c0e54c000
+mmap(0x7f4c0e553000, 61440, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x7000) = 0x7f4c0e553000
+mmap(0x7f4c0e562000, 20480, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16000) = 0x7f4c0e562000
+mmap(0x7f4c0e567000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x7f4c0e567000
+mmap(0x7f4c0e569000, 13392, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f4c0e569000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0000\21\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=18688, ...}) = 0
+mmap(NULL, 20752, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f4c0e546000
+mmap(0x7f4c0e547000, 8192, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f4c0e547000
+mmap(0x7f4c0e549000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f4c0e549000
+mmap(0x7f4c0e54a000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f4c0e54a000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libutil.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\20\22\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=14720, ...}) = 0
+mmap(NULL, 16656, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f4c0e541000
+mmap(0x7f4c0e542000, 4096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1000) = 0x7f4c0e542000
+mmap(0x7f4c0e543000, 4096, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f4c0e543000
+mmap(0x7f4c0e544000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000) = 0x7f4c0e544000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libm.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0\362\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=1325440, ...}) = 0
+mmap(NULL, 1327376, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f4c0e3fc000
+mmap(0x7f4c0e40b000, 634880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xf000) = 0x7f4c0e40b000
+mmap(0x7f4c0e4a6000, 626688, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0xaa000) = 0x7f4c0e4a6000
+mmap(0x7f4c0e53f000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x142000) = 0x7f4c0e53f000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libexpat.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0`A\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=190616, ...}) = 0
+mmap(NULL, 192696, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f4c0e3cc000
+mprotect(0x7f4c0e3d0000, 167936, PROT_NONE) = 0
+mmap(0x7f4c0e3d0000, 122880, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x4000) = 0x7f4c0e3d0000
+mmap(0x7f4c0e3ee000, 40960, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f4c0e3ee000
+mmap(0x7f4c0e3f9000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2c000) = 0x7f4c0e3f9000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libz.so.1", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\0\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\0203\0\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0644, st_size=113088, ...}) = 0
+mmap(NULL, 115088, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f4c0e3af000
+mprotect(0x7f4c0e3b2000, 98304, PROT_NONE) = 0
+mmap(0x7f4c0e3b2000, 69632, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3000) = 0x7f4c0e3b2000
+mmap(0x7f4c0e3c3000, 24576, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x14000) = 0x7f4c0e3c3000
+mmap(0x7f4c0e3ca000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a000) = 0x7f4c0e3ca000
+close(3)                                = 0
+openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\200\177\2\0\0\0\0\0"..., 832) = 832
+fstat(3, {st_mode=S_IFREG|0755, st_size=1839168, ...}) = 0
+mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4c0e3ad000
+mmap(NULL, 1852480, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f4c0e1e8000
+mprotect(0x7f4c0e20e000, 1658880, PROT_NONE) = 0
+mmap(0x7f4c0e20e000, 1347584, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x26000) = 0x7f4c0e20e000
+mmap(0x7f4c0e357000, 307200, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x16f000) = 0x7f4c0e357000
+mmap(0x7f4c0e3a3000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1ba000) = 0x7f4c0e3a3000
+mmap(0x7f4c0e3a9000, 13376, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f4c0e3a9000
+close(3)                                = 0
+mmap(NULL, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4c0e1e5000
+arch_prctl(ARCH_SET_FS, 0x7f4c0e1e5740) = 0
+mprotect(0x7f4c0e3a3000, 12288, PROT_READ) = 0
+mprotect(0x7f4c0e3ca000, 4096, PROT_READ) = 0
+mprotect(0x7f4c0e3f9000, 8192, PROT_READ) = 0
+mprotect(0x7f4c0e53f000, 4096, PROT_READ) = 0
+mprotect(0x7f4c0e544000, 4096, PROT_READ) = 0
+mprotect(0x7f4c0e54a000, 4096, PROT_READ) = 0
+mprotect(0x7f4c0e567000, 4096, PROT_READ) = 0
+mprotect(0x8f3000, 4096, PROT_READ)     = 0
+mprotect(0x7f4c0e5af000, 4096, PROT_READ) = 0
+munmap(0x7f4c0e56f000, 86516)           = 0
+set_tid_address(0x7f4c0e1e5a10)         = 2309
+set_robust_list(0x7f4c0e1e5a20, 24)     = 0
+rt_sigaction(SIGRTMIN, {sa_handler=0x7f4c0e553660, sa_mask=[], sa_flags=SA_RESTORER|SA_SIGINFO, sa_restorer=0x7f4c0e55f8e0}, NULL, 8) = 0
+rt_sigaction(SIGRT_1, {sa_handler=0x7f4c0e553700, sa_mask=[], sa_flags=SA_RESTORER|SA_RESTART|SA_SIGINFO, sa_restorer=0x7f4c0e55f8e0}, NULL, 8) = 0
+rt_sigprocmask(SIG_UNBLOCK, [RTMIN RT_1], NULL, 8) = 0
+prlimit64(0, RLIMIT_STACK, NULL, {rlim_cur=8192*1024, rlim_max=RLIM64_INFINITY}) = 0
+brk(NULL)                               = 0xd23000
+brk(0xd44000)                           = 0xd44000
+openat(AT_FDCWD, "/usr/lib/locale/locale-archive", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=3042304, ...}) = 0
+mmap(NULL, 3042304, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f4c0defe000
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/x86_64-linux-gnu/gconv/gconv-modules.cache", O_RDONLY) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=27002, ...}) = 0
+mmap(NULL, 27002, PROT_READ, MAP_SHARED, 3, 0) = 0x7f4c0e57e000
+close(3)                                = 0
+futex(0x7f4c0e3a869c, FUTEX_WAKE_PRIVATE, 2147483647) = 0
+getcwd("/home/user01/workspace/linuxBook/ch2", 4096) = 37
+stat("/usr/local/sbin/python3", 0x7fffa413c990) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/local/bin/python3", 0x7fffa413c990) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/sbin/python3", 0x7fffa413c990) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/bin/python3", {st_mode=S_IFREG|0755, st_size=5479736, ...}) = 0
+readlink("/usr/bin/python3", "python3.9", 4096) = 9
+readlink("/usr/bin/python3.9", 0x7fffa4137760, 4096) = -1 EINVAL (不適用的引數)
+openat(AT_FDCWD, "/usr/bin/pyvenv.cfg", O_RDONLY) = -1 ENOENT (沒有此一檔案或目錄)
+openat(AT_FDCWD, "/usr/pyvenv.cfg", O_RDONLY) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/bin/Modules/Setup.local", 0x7fffa4138700) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/bin/lib/python3.9/os.py", 0x7fffa4138620) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/bin/lib/python3.9/os.pyc", 0x7fffa4138620) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3.9/os.py", {st_mode=S_IFREG|0644, st_size=39065, ...}) = 0
+openat(AT_FDCWD, "/usr/bin/pybuilddir.txt", O_RDONLY) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/bin/lib/python3.9/lib-dynload", 0x7fffa4137780) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3.9/lib-dynload", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+getrandom("\x2b\xfe\xcf\xf1\xe7\xfa\x4e\x43\xc7\xb0\x2d\x3d\x01\x4c\x92\x96\xbc\xef\x3d\x09\x41\x49\xea\xa8", 24, GRND_NONBLOCK) = 24
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4c0debe000
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4c0de7e000
+brk(0xd69000)                           = 0xd69000
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4c0de3e000
+sysinfo({uptime=978, loads=[704, 10880, 11136], totalram=10447360000, freeram=7972323328, sharedram=93642752, bufferram=135770112, totalswap=1022357504, freeswap=1022357504, procs=632, totalhigh=0, freehigh=0, mem_unit=1}) = 0
+openat(AT_FDCWD, "/etc/localtime", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=761, ...}) = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=761, ...}) = 0
+read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 761
+lseek(3, -466, SEEK_CUR)                = 295
+read(3, "TZif2\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4096) = 466
+close(3)                                = 0
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4c0ddfe000
+stat("/usr/lib/python39.zip", 0x7fffa413aff0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python39.zip", 0x7fffa413acd0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+brk(0xd8a000)                           = 0xd8a000
+openat(AT_FDCWD, "/usr/lib/python3.9", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+getdents64(3, 0xd691e0 /* 208 entries */, 32768) = 6944
+getdents64(3, 0xd691e0 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/usr/lib/python3.9/encodings/__init__.cpython-39-x86_64-linux-gnu.so", 0x7fffa413b110) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3.9/encodings/__init__.abi3.so", 0x7fffa413b110) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3.9/encodings/__init__.so", 0x7fffa413b110) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3.9/encodings/__init__.py", {st_mode=S_IFREG|0644, st_size=5588, ...}) = 0
+stat("/usr/lib/python3.9/encodings/__init__.py", {st_mode=S_IFREG|0644, st_size=5588, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/encodings/__pycache__/__init__.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fcntl(3, F_GETFD)                       = 0x1 (flags FD_CLOEXEC)
+fstat(3, {st_mode=S_IFREG|0644, st_size=3895, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413b770)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=3895, ...}) = 0
+read(3, "a\r\r\n\0\0\0\0PL\35`\324\25\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 3896) = 3895
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/codecs.py", {st_mode=S_IFREG|0644, st_size=36673, ...}) = 0
+stat("/usr/lib/python3.9/codecs.py", {st_mode=S_IFREG|0644, st_size=36673, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/codecs.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=33886, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413a930)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=33886, ...}) = 0
+read(3, "a\r\r\n\0\0\0\0PL\35`A\217\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 33887) = 33886
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.9/encodings", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.9/encodings", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.9/encodings", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/encodings", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+getdents64(3, 0xd78410 /* 125 entries */, 32768) = 4224
+getdents64(3, 0xd78410 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/usr/lib/python3.9/encodings/aliases.py", {st_mode=S_IFREG|0644, st_size=15677, ...}) = 0
+stat("/usr/lib/python3.9/encodings/aliases.py", {st_mode=S_IFREG|0644, st_size=15677, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/encodings/__pycache__/aliases.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=6328, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413a100)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=6328, ...}) = 0
+read(3, "a\r\r\n\0\0\0\0PL\35`==\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 6329) = 6328
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.9/encodings", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.9/encodings/utf_8.py", {st_mode=S_IFREG|0644, st_size=1005, ...}) = 0
+stat("/usr/lib/python3.9/encodings/utf_8.py", {st_mode=S_IFREG|0644, st_size=1005, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/encodings/__pycache__/utf_8.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1630, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413b7d0)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=1630, ...}) = 0
+read(3, "a\r\r\n\0\0\0\0PL\35`\355\3\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1631) = 1630
+read(3, "", 1)                          = 0
+close(3)                                = 0
+rt_sigaction(SIGPIPE, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f4c0e55f8e0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGXFSZ, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f4c0e55f8e0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGHUP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGQUIT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGILL, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTRAP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGABRT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGBUS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGFPE, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGKILL, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGUSR1, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSEGV, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGUSR2, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPIPE, NULL, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f4c0e55f8e0}, 8) = 0
+rt_sigaction(SIGALRM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTERM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSTKFLT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGCHLD, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGCONT, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSTOP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTSTP, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTTIN, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGTTOU, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGURG, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGXCPU, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGXFSZ, NULL, {sa_handler=SIG_IGN, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f4c0e55f8e0}, 8) = 0
+rt_sigaction(SIGVTALRM, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPROF, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGWINCH, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGIO, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGPWR, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGSYS, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_2, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_3, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_4, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_5, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_6, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_7, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_8, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_9, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_10, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_11, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_12, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_13, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_14, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_15, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_16, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_17, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_18, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_19, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_20, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_21, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_22, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_23, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_24, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_25, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_26, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_27, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_28, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_29, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_30, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_31, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGRT_32, NULL, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+rt_sigaction(SIGINT, {sa_handler=0x63fc20, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f4c0e55f8e0}, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=0}, 8) = 0
+fstat(0, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x1), ...}) = 0
+stat("/usr/lib/python3.9/encodings", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.9/encodings/latin_1.py", {st_mode=S_IFREG|0644, st_size=1264, ...}) = 0
+stat("/usr/lib/python3.9/encodings/latin_1.py", {st_mode=S_IFREG|0644, st_size=1264, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/encodings/__pycache__/latin_1.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=1893, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413b860)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=1893, ...}) = 0
+read(3, "a\r\r\n\0\0\0\0PL\35`\360\4\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1894) = 1893
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/io.py", {st_mode=S_IFREG|0644, st_size=3541, ...}) = 0
+stat("/usr/lib/python3.9/io.py", {st_mode=S_IFREG|0644, st_size=3541, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/io.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=3406, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413b860)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=3406, ...}) = 0
+read(3, "a\r\r\n\0\0\0\0PL\35`\325\r\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 3407) = 3406
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/abc.py", {st_mode=S_IFREG|0644, st_size=4489, ...}) = 0
+stat("/usr/lib/python3.9/abc.py", {st_mode=S_IFREG|0644, st_size=4489, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/abc.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=5336, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413aa20)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=5336, ...}) = 0
+read(3, "a\r\r\n\0\0\0\0PL\35`\211\21\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 5337) = 5336
+read(3, "", 1)                          = 0
+close(3)                                = 0
+dup(0)                                  = 3
+close(3)                                = 0
+fstat(0, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x1), ...}) = 0
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+lseek(0, 0, SEEK_CUR)                   = -1 ESPIPE (不合法的搜尋)
+ioctl(0, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+dup(1)                                  = 3
+close(3)                                = 0
+fstat(1, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x1), ...}) = 0
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+lseek(1, 0, SEEK_CUR)                   = -1 ESPIPE (不合法的搜尋)
+ioctl(1, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+dup(2)                                  = 3
+close(3)                                = 0
+fstat(2, {st_mode=S_IFCHR|0600, st_rdev=makedev(0x88, 0x1), ...}) = 0
+ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+lseek(2, 0, SEEK_CUR)                   = -1 ESPIPE (不合法的搜尋)
+ioctl(2, TCGETS, {B38400 opost isig icanon echo ...}) = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/site.py", {st_mode=S_IFREG|0644, st_size=22561, ...}) = 0
+stat("/usr/lib/python3.9/site.py", {st_mode=S_IFREG|0644, st_size=22561, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/site.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=17300, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413b860)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=17300, ...}) = 0
+brk(0xdac000)                           = 0xdac000
+read(3, "a\r\r\n\0\0\0\0PL\35`!X\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 17301) = 17300
+read(3, "", 1)                          = 0
+close(3)                                = 0
+brk(0xda8000)                           = 0xda8000
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/os.py", {st_mode=S_IFREG|0644, st_size=39065, ...}) = 0
+stat("/usr/lib/python3.9/os.py", {st_mode=S_IFREG|0644, st_size=39065, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/os.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=31644, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413aa20)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=31644, ...}) = 0
+read(3, "a\r\r\n\0\0\0\0PL\35`\231\230\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 31645) = 31644
+read(3, "", 1)                          = 0
+close(3)                                = 0
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4c0ddbe000
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/stat.py", {st_mode=S_IFREG|0644, st_size=5485, ...}) = 0
+stat("/usr/lib/python3.9/stat.py", {st_mode=S_IFREG|0644, st_size=5485, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/stat.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=4370, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa4139be0)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=4370, ...}) = 0
+read(3, "a\r\r\n\0\0\0\0PL\35`m\25\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4371) = 4370
+read(3, "", 1)                          = 0
+close(3)                                = 0
+mmap(NULL, 151552, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4c0dd99000
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/_collections_abc.py", {st_mode=S_IFREG|0644, st_size=29341, ...}) = 0
+stat("/usr/lib/python3.9/_collections_abc.py", {st_mode=S_IFREG|0644, st_size=29341, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/_collections_abc.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=31704, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa4139be0)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=31704, ...}) = 0
+read(3, "a\r\r\n\0\0\0\0PL\35`\235r\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 31705) = 31704
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/posixpath.py", {st_mode=S_IFREG|0644, st_size=15627, ...}) = 0
+stat("/usr/lib/python3.9/posixpath.py", {st_mode=S_IFREG|0644, st_size=15627, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/posixpath.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=10327, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa4139be0)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=10327, ...}) = 0
+read(3, "a\r\r\n\0\0\0\0PL\35`\v=\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 10328) = 10327
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/genericpath.py", {st_mode=S_IFREG|0644, st_size=4975, ...}) = 0
+stat("/usr/lib/python3.9/genericpath.py", {st_mode=S_IFREG|0644, st_size=4975, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/genericpath.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=4022, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa4138da0)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=4022, ...}) = 0
+read(3, "a\r\r\n\0\0\0\0PL\35`o\23\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4023) = 4022
+read(3, "", 1)                          = 0
+close(3)                                = 0
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4c0dd59000
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/_sitebuiltins.py", {st_mode=S_IFREG|0644, st_size=3115, ...}) = 0
+stat("/usr/lib/python3.9/_sitebuiltins.py", {st_mode=S_IFREG|0644, st_size=3115, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/_sitebuiltins.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=3499, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413aa20)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=3499, ...}) = 0
+read(3, "a\r\r\n\0\0\0\0PL\35`+\f\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 3500) = 3499
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/bin/pyvenv.cfg", 0x7fffa413b200) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/pyvenv.cfg", 0x7fffa413b200) = -1 ENOENT (沒有此一檔案或目錄)
+geteuid()                               = 0
+getuid()                                = 0
+getegid()                               = 0
+getgid()                                = 0
+stat("/root/.local/lib/python3.9/site-packages", 0x7fffa413b490) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/local/lib/python3.9/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/local/lib/python3.9/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+getdents64(3, 0xd91f20 /* 8 entries */, 32768) = 272
+getdents64(3, 0xd91f20 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+getdents64(3, 0xd91f20 /* 770 entries */, 32768) = 31656
+getdents64(3, 0xd91f20 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/python3/dist-packages/PasteScript-2.0.2-nspkg.pth", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=534, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413ad90)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+ioctl(3, TCGETS, 0x7fffa413b060)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/_bootlocale.py", {st_mode=S_IFREG|0644, st_size=1801, ...}) = 0
+stat("/usr/lib/python3.9/_bootlocale.py", {st_mode=S_IFREG|0644, st_size=1801, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/_bootlocale.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=1225, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4139e30)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=1225, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`\t\7\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 1226) = 1225
+read(4, "", 1)                          = 0
+close(4)                                = 0
+read(3, "import sys, types, os;has_mfs = "..., 8192) = 534
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/types.py", {st_mode=S_IFREG|0644, st_size=9746, ...}) = 0
+stat("/usr/lib/python3.9/types.py", {st_mode=S_IFREG|0644, st_size=9746, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/types.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=9219, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4139e10)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=9219, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`\22&\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 9220) = 9219
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/importlib/__init__.cpython-39-x86_64-linux-gnu.so", 0x7fffa4138e40) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3.9/importlib/__init__.abi3.so", 0x7fffa4138e40) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3.9/importlib/__init__.so", 0x7fffa4138e40) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3.9/importlib/__init__.py", {st_mode=S_IFREG|0644, st_size=6061, ...}) = 0
+stat("/usr/lib/python3.9/importlib/__init__.py", {st_mode=S_IFREG|0644, st_size=6061, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/importlib/__pycache__/__init__.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=3831, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa41394a0)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=3831, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`\255\27\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 3832) = 3831
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/warnings.py", {st_mode=S_IFREG|0644, st_size=19688, ...}) = 0
+stat("/usr/lib/python3.9/warnings.py", {st_mode=S_IFREG|0644, st_size=19688, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/warnings.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=13603, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4138660)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=13603, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`\350L\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 13604) = 13603
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9/importlib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.9/importlib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.9/importlib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/importlib", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+fstat(4, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+getdents64(4, 0xd9ec40 /* 12 entries */, 32768) = 392
+getdents64(4, 0xd9ec40 /* 0 entries */, 32768) = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9/importlib/util.py", {st_mode=S_IFREG|0644, st_size=11321, ...}) = 0
+stat("/usr/lib/python3.9/importlib/util.py", {st_mode=S_IFREG|0644, st_size=11321, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/importlib/__pycache__/util.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=9320, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4139d60)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=9320, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`9,\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 9321) = 9320
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9/importlib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.9/importlib/abc.py", {st_mode=S_IFREG|0644, st_size=14924, ...}) = 0
+stat("/usr/lib/python3.9/importlib/abc.py", {st_mode=S_IFREG|0644, st_size=14924, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/importlib/__pycache__/abc.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=16815, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa41386f0)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=16815, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`L:\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 16816) = 16815
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9/importlib", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.9/importlib/machinery.py", {st_mode=S_IFREG|0644, st_size=844, ...}) = 0
+stat("/usr/lib/python3.9/importlib/machinery.py", {st_mode=S_IFREG|0644, st_size=844, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/importlib/__pycache__/machinery.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=962, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4137080)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=962, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`L\3\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 963) = 962
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/typing.py", {st_mode=S_IFREG|0644, st_size=74752, ...}) = 0
+stat("/usr/lib/python3.9/typing.py", {st_mode=S_IFREG|0644, st_size=74752, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/typing.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=71311, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa41378b0)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=71311, ...}) = 0
+brk(0xdd3000)                           = 0xdd3000
+read(4, "a\r\r\n\0\0\0\0PL\35`\0$\1\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 71312) = 71311
+read(4, "", 1)                          = 0
+close(4)                                = 0
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4c0dd19000
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/collections/__init__.cpython-39-x86_64-linux-gnu.so", 0x7fffa4136410) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3.9/collections/__init__.abi3.so", 0x7fffa4136410) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3.9/collections/__init__.so", 0x7fffa4136410) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3.9/collections/__init__.py", {st_mode=S_IFREG|0644, st_size=49819, ...}) = 0
+stat("/usr/lib/python3.9/collections/__init__.py", {st_mode=S_IFREG|0644, st_size=49819, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/collections/__pycache__/__init__.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=48099, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4136a70)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=48099, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`\233\302\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 48100) = 48099
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/heapq.py", {st_mode=S_IFREG|0644, st_size=22877, ...}) = 0
+stat("/usr/lib/python3.9/heapq.py", {st_mode=S_IFREG|0644, st_size=22877, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/heapq.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=14038, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4135c30)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=14038, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`]Y\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 14039) = 14038
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/keyword.py", {st_mode=S_IFREG|0644, st_size=1047, ...}) = 0
+stat("/usr/lib/python3.9/keyword.py", {st_mode=S_IFREG|0644, st_size=1047, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/keyword.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=914, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4135c30)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=914, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`\27\4\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 915) = 914
+read(4, "", 1)                          = 0
+close(4)                                = 0
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4c0dcd9000
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/operator.py", {st_mode=S_IFREG|0644, st_size=10711, ...}) = 0
+stat("/usr/lib/python3.9/operator.py", {st_mode=S_IFREG|0644, st_size=10711, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/operator.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=13746, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4135c30)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=13746, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`\327)\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 13747) = 13746
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/reprlib.py", {st_mode=S_IFREG|0644, st_size=5267, ...}) = 0
+stat("/usr/lib/python3.9/reprlib.py", {st_mode=S_IFREG|0644, st_size=5267, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/reprlib.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=5305, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4135c30)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=5305, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`\223\24\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 5306) = 5305
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9/collections", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.9/collections", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.9/collections", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/collections", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+fstat(4, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+getdents64(4, 0xdb9350 /* 5 entries */, 32768) = 144
+getdents64(4, 0xdb9350 /* 0 entries */, 32768) = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9/collections/abc.py", {st_mode=S_IFREG|0644, st_size=119, ...}) = 0
+stat("/usr/lib/python3.9/collections/abc.py", {st_mode=S_IFREG|0644, st_size=119, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/collections/__pycache__/abc.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=235, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4136a70)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=235, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`w\0\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 236) = 235
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/contextlib.py", {st_mode=S_IFREG|0644, st_size=23676, ...}) = 0
+stat("/usr/lib/python3.9/contextlib.py", {st_mode=S_IFREG|0644, st_size=23676, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/contextlib.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=19486, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4136a70)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=19486, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`|\\\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 19487) = 19486
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/functools.py", {st_mode=S_IFREG|0644, st_size=37491, ...}) = 0
+stat("/usr/lib/python3.9/functools.py", {st_mode=S_IFREG|0644, st_size=37491, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/functools.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=28180, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4135c30)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=28180, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`s\222\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 28181) = 28180
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/re.py", {st_mode=S_IFREG|0644, st_size=15861, ...}) = 0
+stat("/usr/lib/python3.9/re.py", {st_mode=S_IFREG|0644, st_size=15861, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/re.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=14360, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4136a70)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=14360, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`\365=\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 14361) = 14360
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/enum.py", {st_mode=S_IFREG|0644, st_size=37886, ...}) = 0
+stat("/usr/lib/python3.9/enum.py", {st_mode=S_IFREG|0644, st_size=37886, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/enum.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=25640, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4135c30)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=25640, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`\376\223\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 25641) = 25640
+read(4, "", 1)                          = 0
+close(4)                                = 0
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4c0dc99000
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/sre_compile.py", {st_mode=S_IFREG|0644, st_size=26695, ...}) = 0
+stat("/usr/lib/python3.9/sre_compile.py", {st_mode=S_IFREG|0644, st_size=26695, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/sre_compile.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=15051, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4135c30)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=15051, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`Gh\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 15052) = 15051
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/sre_parse.py", {st_mode=S_IFREG|0644, st_size=40230, ...}) = 0
+stat("/usr/lib/python3.9/sre_parse.py", {st_mode=S_IFREG|0644, st_size=40230, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/sre_parse.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=21601, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4134df0)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=21601, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`&\235\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 21602) = 21601
+read(4, "", 1)                          = 0
+close(4)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/sre_constants.py", {st_mode=S_IFREG|0644, st_size=7154, ...}) = 0
+stat("/usr/lib/python3.9/sre_constants.py", {st_mode=S_IFREG|0644, st_size=7154, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/sre_constants.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=6315, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4133fb0)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=6315, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`\362\33\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 6316) = 6315
+read(4, "", 1)                          = 0
+close(4)                                = 0
+brk(0xdf4000)                           = 0xdf4000
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/copyreg.py", {st_mode=S_IFREG|0644, st_size=7274, ...}) = 0
+stat("/usr/lib/python3.9/copyreg.py", {st_mode=S_IFREG|0644, st_size=7274, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/copyreg.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 4
+fstat(4, {st_mode=S_IFREG|0644, st_size=4428, ...}) = 0
+ioctl(4, TCGETS, 0x7fffa4135c30)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(4, 0, SEEK_CUR)                   = 0
+lseek(4, 0, SEEK_CUR)                   = 0
+fstat(4, {st_mode=S_IFREG|0644, st_size=4428, ...}) = 0
+read(4, "a\r\r\n\0\0\0\0PL\35`j\34\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 4429) = 4428
+read(4, "", 1)                          = 0
+close(4)                                = 0
+mmap(NULL, 262144, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4c0dc59000
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 4
+fstat(4, {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+getdents64(4, 0xde4b90 /* 770 entries */, 32768) = 31656
+getdents64(4, 0xde4b90 /* 0 entries */, 32768) = 0
+close(4)                                = 0
+brk(0xe17000)                           = 0xe17000
+stat("/usr/lib/python3/dist-packages/paste/__init__.cpython-39-x86_64-linux-gnu.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/paste/__init__.abi3.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/paste/__init__.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/paste/__init__.py", {st_mode=S_IFREG|0644, st_size=0, ...}) = 0
+read(3, "", 8192)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/python3/dist-packages/basemap-1.2.1-nspkg.pth", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=569, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413ad90)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+ioctl(3, TCGETS, 0x7fffa413b060)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+read(3, "import sys, types, os;has_mfs = "..., 8192) = 569
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+stat("/usr/lib/python3/dist-packages/mpl_toolkits/__init__.cpython-39-x86_64-linux-gnu.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/mpl_toolkits/__init__.abi3.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/mpl_toolkits/__init__.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/mpl_toolkits/__init__.py", {st_mode=S_IFREG|0644, st_size=122, ...}) = 0
+read(3, "", 8192)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/python3/dist-packages/matplotlib-3.3.4-nspkg.pth", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=569, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413ad90)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+ioctl(3, TCGETS, 0x7fffa413b060)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+read(3, "import sys, types, os;has_mfs = "..., 8192) = 569
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+stat("/usr/lib/python3/dist-packages/mpl_toolkits/__init__.cpython-39-x86_64-linux-gnu.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/mpl_toolkits/__init__.abi3.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/mpl_toolkits/__init__.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/mpl_toolkits/__init__.py", {st_mode=S_IFREG|0644, st_size=122, ...}) = 0
+read(3, "", 8192)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/python3/dist-packages/repoze.lru-0.7-nspkg.pth", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=539, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413ad90)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+ioctl(3, TCGETS, 0x7fffa413b060)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+read(3, "import sys, types, os;has_mfs = "..., 8192) = 539
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+stat("/usr/lib/python3/dist-packages/repoze/__init__.cpython-39-x86_64-linux-gnu.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/repoze/__init__.abi3.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/repoze/__init__.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/repoze/__init__.py", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/repoze/__init__.pyc", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/repoze", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+read(3, "", 8192)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/python3/dist-packages/ruamel.yaml-0.17.16-nspkg.pth", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=539, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413ad90)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+ioctl(3, TCGETS, 0x7fffa413b060)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+read(3, "import sys, types, os;has_mfs = "..., 8192) = 539
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+stat("/usr/lib/python3/dist-packages/ruamel/__init__.cpython-39-x86_64-linux-gnu.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/ruamel/__init__.abi3.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/ruamel/__init__.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/ruamel/__init__.py", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/ruamel/__init__.pyc", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/ruamel", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+read(3, "", 8192)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/python3/dist-packages/zope.deprecation-4.4.0-nspkg.pth", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=529, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413ad90)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+ioctl(3, TCGETS, 0x7fffa413b060)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+read(3, "import sys, types, os;has_mfs = "..., 8192) = 529
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+stat("/usr/lib/python3/dist-packages/zope/__init__.cpython-39-x86_64-linux-gnu.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/zope/__init__.abi3.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/zope/__init__.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/zope/__init__.py", {st_mode=S_IFREG|0644, st_size=56, ...}) = 0
+read(3, "", 8192)                       = 0
+close(3)                                = 0
+openat(AT_FDCWD, "/usr/lib/python3/dist-packages/zope.interface-5.4.0-nspkg.pth", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=529, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413ad90)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+ioctl(3, TCGETS, 0x7fffa413b060)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+read(3, "import sys, types, os;has_mfs = "..., 8192) = 529
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+stat("/usr/lib/python3/dist-packages/zope/__init__.cpython-39-x86_64-linux-gnu.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/zope/__init__.abi3.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/zope/__init__.so", 0x7fffa4139fb0) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3/dist-packages/zope/__init__.py", {st_mode=S_IFREG|0644, st_size=56, ...}) = 0
+read(3, "", 8192)                       = 0
+close(3)                                = 0
+stat("/usr/lib/python3.9/dist-packages", 0x7fffa413b390) = -1 ENOENT (沒有此一檔案或目錄)
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/sitecustomize.py", {st_mode=S_IFREG|0644, st_size=155, ...}) = 0
+stat("/usr/lib/python3.9/sitecustomize.py", {st_mode=S_IFREG|0644, st_size=155, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/__pycache__/sitecustomize.cpython-39.pyc", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413a700)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=218, ...}) = 0
+read(3, "a\r\r\n\0\0\0\0PL\35`\233\0\0\0\343\0\0\0\0\0\0\0\0\0\0\0\0\0\0\0"..., 219) = 218
+read(3, "", 1)                          = 0
+close(3)                                = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/lib-dynload", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.9/lib-dynload", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/lib/python3.9/lib-dynload", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/lib/python3.9/lib-dynload", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+getdents64(3, 0xde4b90 /* 48 entries */, 32768) = 2984
+getdents64(3, 0xde4b90 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/usr/local/lib/python3.9/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/usr/local/lib/python3.9/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/usr/local/lib/python3.9/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+openat(AT_FDCWD, "/usr/local/lib/python3.9/dist-packages", O_RDONLY|O_NONBLOCK|O_CLOEXEC|O_DIRECTORY) = 3
+fstat(3, {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+getdents64(3, 0xde4b90 /* 8 entries */, 32768) = 272
+getdents64(3, 0xde4b90 /* 0 entries */, 32768) = 0
+close(3)                                = 0
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+stat("/usr/lib/python3.9", {st_mode=S_IFDIR|0755, st_size=12288, ...}) = 0
+stat("/usr/lib/python3.9/lib-dynload", {st_mode=S_IFDIR|0755, st_size=4096, ...}) = 0
+stat("/usr/local/lib/python3.9/dist-packages", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+stat("/usr/lib/python3/dist-packages", {st_mode=S_IFDIR|0755, st_size=36864, ...}) = 0
+stat("/home/user01/workspace/linuxBook/ch2/./hello.py", {st_mode=S_IFREG|0644, st_size=21, ...}) = 0
+openat(AT_FDCWD, "/home/user01/workspace/linuxBook/ch2/./hello.py", O_RDONLY|O_CLOEXEC) = 3
+fstat(3, {st_mode=S_IFREG|0644, st_size=21, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413c530)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+lseek(3, -22, SEEK_END)                 = -1 EINVAL (不適用的引數)
+close(3)                                = 0
+stat("/home/user01/workspace/linuxBook/ch2/./hello.py", {st_mode=S_IFREG|0644, st_size=21, ...}) = 0
+readlink("./hello.py", 0x7fffa412bde0, 4096) = -1 EINVAL (不適用的引數)
+getcwd("/home/user01/workspace/linuxBook/ch2", 4096) = 37
+lstat("/home/user01/workspace/linuxBook/ch2/hello.py", {st_mode=S_IFREG|0644, st_size=21, ...}) = 0
+openat(AT_FDCWD, "/home/user01/workspace/linuxBook/ch2/./hello.py", O_RDONLY) = 3
+fcntl(3, F_GETFD)                       = 0
+fcntl(3, F_SETFD, FD_CLOEXEC)           = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=21, ...}) = 0
+ioctl(3, TCGETS, 0x7fffa413cd70)        = -1 ENOTTY (不希望的裝置輸出入控制 (ioctl))
+lseek(3, 0, SEEK_CUR)                   = 0
+fstat(3, {st_mode=S_IFREG|0644, st_size=21, ...}) = 0
+read(3, "print(\"hello world\");", 4096) = 21
+lseek(3, 0, SEEK_SET)                   = 0
+read(3, "print(\"hello world\");", 4096) = 21
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+write(1, "hello world\n", 12)           = 12
+rt_sigaction(SIGINT, {sa_handler=SIG_DFL, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f4c0e55f8e0}, {sa_handler=0x63fc20, sa_mask=[], sa_flags=SA_RESTORER, sa_restorer=0x7f4c0e55f8e0}, 8) = 0
+brk(0xe05000)                           = 0xe05000
+brk(0xe04000)                           = 0xe04000
+exit_group(0)                           = ?
++++ exited with 0 +++
