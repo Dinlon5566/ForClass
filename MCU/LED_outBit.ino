@@ -1,10 +1,9 @@
-
 #define MS 5
 #define NUM 20 // 首先定義LED的數目
 //D0, D1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, D14, D15, A0, A1, A2, A3    , LED1, LED2, LED3,LED4
 
 int LEDS[5][4] = {{D0, D1, 2, 0}, {4, 5, 6, 7}, {8, 9, 10, 11}, {12, 13, D14, D15}, { A3, A2, A1, A0}};
-
+int LED16[16] = {D0, D1, 2, A0, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, D14, D15};
 // 將每個腳位模式設為OUTPUT
 void setup() {
 
@@ -31,7 +30,17 @@ void setallDown() {
   }
 }
 
-void lightBit(int num) {
+void lightBitEx(unsigned int num) {
+  
+  for (int i = 0; i < 16; i++) {
+    if (num & 1) {
+      digitalWrite(LED16[i], 0);
+    }
+    num >>= 1;
+  }
+}
+
+void lightBit(unsigned int num) {
   for (int i = 0; i < 4; i++) {
     if (num & 1) {
       light(i);
@@ -41,9 +50,11 @@ void lightBit(int num) {
 }
 
 void loop() {
-  for (int i = 0; i < 16; i++ ) {
+  for (unsigned int i = 0; i < 0xF; i++ ) {
     setallDown();
     lightBit(i);
+    
+    /*lightBitEx(i);*/
     delay(300);
   }
 
