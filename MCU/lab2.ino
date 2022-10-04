@@ -15,7 +15,7 @@ const byte SEGMENT_SELECT[] = {0x0E, 0x0D, 0x0B, 0x07};
 
 const byte DP = 0x40;   // Digit Point
 byte Row = 0, Col = 0;
-unsigned int val[4] = {0,0,0,0};
+unsigned int val[4] = {0, 0, 0, 0};
 unsigned int loc = 0;
 
 void setup() {
@@ -236,7 +236,7 @@ void loop() {
       leftShift(val[i]);
     }
   } else if (keyscan() == true) {
-     digitalWrite(LATCH_DIO, LOW);
+    digitalWrite(LATCH_DIO, LOW);
     int keyindex = (Row - 1) * 4 + Col;
     val[loc] = keyindex;
     loc = (loc + 1) % 4;
@@ -249,4 +249,9 @@ void loop() {
     shiftOut(DATA_DIO, CLK_DIO, MSBFIRST, SEGMENT_SELECT[i] );
     digitalWrite(LATCH_DIO, HIGH);
   }
+
+  digitalWrite(LATCH_DIO, LOW);  
+  shiftOut(DATA_DIO, CLK_DIO, MSBFIRST, 0x00);
+  shiftOut(DATA_DIO, CLK_DIO, MSBFIRST, SEGMENT_SELECT[0] );
+  digitalWrite(LATCH_DIO, HIGH);
 }
