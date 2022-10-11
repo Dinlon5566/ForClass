@@ -3,8 +3,6 @@
 #define BUTTON3 BT3
 #define BUTTON4 BT4
 
-
-
 #define LATCH_DIO D15
 #define CLK_DIO D14
 #define DATA_DIO 2        // D2 is OK, too
@@ -40,7 +38,7 @@ void setup() {
 }
 void WriteNumberToSegment(byte Segment, byte Value)
 {
-  //設定 arg1 為面板位置，arg2為顯示號碼
+  //設定 arg1 為面板位置 PIN:DIO，arg2為顯示號碼 PIN:P；需要依序輸入。
   digitalWrite(LATCH_DIO, LOW);
   shiftOut(DATA_DIO, CLK_DIO, MSBFIRST, SEGMENT_MAP[Value]);
   shiftOut(DATA_DIO, CLK_DIO, MSBFIRST, SEGMENT_SELECT[Segment] );
@@ -73,13 +71,13 @@ bool keyscan( )
 {
   Row = 0; Col = 0;
   bool keypressed = false;
-  //scan col1
+  //將A0設定為低電位，使目標按鍵按下時也會變成按鍵中僅有的低電位。
   digitalWrite(A0, LOW);
   digitalWrite(A1, HIGH);
   digitalWrite(A2, HIGH);
   digitalWrite(A3, HIGH);
   delayMicroseconds(100);
-  //Read keys in row.1
+  //若是該位置為低電位，即為按下按鈕。
   if (digitalRead(10) == LOW)
   {
     digitalWrite(A0, HIGH);
