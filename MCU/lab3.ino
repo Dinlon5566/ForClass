@@ -20,7 +20,7 @@ void setup() {
   pinMode(A0, OUTPUT); //A1, C1: S1,S5,S9 (1,4,7,*)
   pinMode(A3, OUTPUT); //A4, C4, S4,S8,S12 (A,B,C,D)
 
-  lcd.begin(16, 2);
+  lcd.begin(40, 2);
   lcd.noCursor();
   lcd.setCursor(0, 1);
   lcd.print("Init done");
@@ -30,23 +30,30 @@ int buttonState1, buttonState2, buttonState3, buttonState4 = 0;
 int shiftArr = 0, shiftStat = 0;
 int cursorStat = 0;
 int keyIn = -1;
-String str1 = "This library allows an Arduino board to control LiquidCrystal displays (LCDs) based on the Hitachi HD44780 (or a compatible) chipset";
-String str2 = "which is found on most text-based LCDs. The library works with in either 4- or 8-bit mode (i.e. using 4 or 8 data lines in addition to the rs, enable, and, optionally, the rw control lines)";
+String str1 = "_123456789_223456789_323456789_423456789";
+String str2 = "@123456789@223456789@323456789@423456789";
 
 void loop() {
   buttonState1 = digitalRead(BT1);
   buttonState2 = digitalRead(BT2);
   buttonState3 = digitalRead(BT3);
   buttonState4 = digitalRead(BT4);
-  if (scanKey()==1) {
+  if (scanKey() == 1) {
     if (keyIn == 0x01) {
-      lcd.clear();
+      lcd.setCursor(0, 0);
       lcd.print(str1);
     }
     if (keyIn == 0x0a) {
-      lcd.clear();
+      lcd.setCursor(0, 1);
       lcd.print(str2);
     }
+    if (keyIn == 0x04) {
+      shiftStr(1);
+    }
+    if (keyIn == 0x0d) {
+      shiftStr(0);
+    }
+    delay(DELAY_TIME);
   }
   if (buttonState1 == 0) {
     lcd.clear();
@@ -62,7 +69,22 @@ void loop() {
       lcd.noCursor();
     }
   }
+  delay(DELAY_TIME);
 }
+
+void shiftStr(bool shiftArr) {
+  for (int i = 0; i < 40; i++) {
+    if (shiftArr == 1)
+      lcd.scrollDisplayLeft();
+    else
+      lcd.scrollDisplayRight();
+    delay(DELAY_TIME);
+
+  }
+
+
+}
+
 bool scanKey() {
   keyIn = -1;
   digitalWrite(A0, LOW);
@@ -118,4 +140,3 @@ bool scanKey() {
   }
 
  */
-
