@@ -17,7 +17,7 @@ int count = 0;
 int voice = 2;
 int speakerPin = D3;
 
-int BPM = 158*2;
+int BPM = 132;
 int tempo = 1 / ((float)BPM / 60) * 1000;
 
 bool record = 0;
@@ -28,9 +28,15 @@ char KeyValue[] = {'1', '2', '3', 'A', '4', '5', '6', 'B', '7', '8', '9', 'C', '
 byte Row = 0, Col = 0;
 
 
+String sheet = "edcdefgedcbabg";
+double noteSpeed[]={1,1.5,1,1.5,1,1.5,1,0.3,0.3,0.3,1,1.5,1,1.5,1,0.3,0.3,0.3,1,1.5,1,1.5,1,1.5,1,1.5,1,1.5,1,1.5,1,1,1.5};
+
+/*
+ *  
 String sheet = "ccggaag-ffeeddc-";
-
-
+double noteSpeed[]={1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1};
+ * 
+ */
 
 void setup() {
   // put your setup code here, to run once:
@@ -294,6 +300,7 @@ bool keyscan( )
   {
     digitalWrite(A3, HIGH);
     voice = 3; //H
+    lcd.clear();
     lcd.setCursor(0, 12);
     lcd.print("HIGH");
     Col = 4; Row = 1;
@@ -305,7 +312,8 @@ bool keyscan( )
   {
     digitalWrite(A3, HIGH);
     voice = 2; //M
-
+    
+    lcd.clear();
     lcd.setCursor(0, 10);
     lcd.print("MIDDLE");
     Col = 4; Row = 2;
@@ -317,6 +325,8 @@ bool keyscan( )
   {
     digitalWrite(A3, HIGH);
     voice = 1; //L
+
+    lcd.clear();
     lcd.setCursor(0, 13);
     lcd.print("LOW");
     Col = 4; Row = 3;
@@ -329,6 +339,8 @@ bool keyscan( )
     digitalWrite(A3, HIGH);
 
     voice = 0; //Z
+
+    lcd.clear();
     lcd.setCursor(0, 13);
     lcd.print("MUTE");
 
@@ -341,10 +353,11 @@ bool keyscan( )
 void playSong() {
     lcd.setCursor(0, 1);
 lcd.print("Playing a Song.");
-  for (int i = 0; i < 15; i++) {
-    playNote(speakerPin, sheet[i], tempo, voice);
+  for (int i = 0; i < 14; i++) {
+    playNote(speakerPin, sheet[i], tempo*noteSpeed[i], voice);
   }
 }
+
 void addNote(char c) {
   rec[count++] = c;
 }
@@ -355,7 +368,7 @@ void playNote(int OutputPin, char note, unsigned long duration, int select) {
   if (note == '-') {
     delay(duration);
   }
-  for (int i = 0; i < 8; i++) {
+  for (int i = 0; i < 7; i++) {
     if (names[i] == note) {
       tone(OutputPin, tones[i]*select, duration);
       delay(duration);
