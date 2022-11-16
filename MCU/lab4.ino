@@ -17,7 +17,8 @@ int count = 0;
 int voice = 2;
 int speakerPin = D3;
 
-int BPM = 132;
+//T=4/4
+int BPM = 132*2;
 int tempo = 1 / ((float)BPM / 60) * 1000;
 
 bool record = 0;
@@ -28,8 +29,13 @@ char KeyValue[] = {'1', '2', '3', 'A', '4', '5', '6', 'B', '7', '8', '9', 'C', '
 byte Row = 0, Col = 0;
 
 
-String sheet = "edcdefgedcbabg";
-double noteSpeed[]={1,1.5,1,1.5,1,1.5,1,0.3,0.3,0.3,1,1.5,1,1.5,1,0.3,0.3,0.3,1,1.5,1,1.5,1,1.5,1,1.5,1,1.5,1,1.5,1,1,1.5};
+String sheet = "edcdefgedcbabcgagfegcedcdacbbcd-edcdefgedcbabcagfegcedcdfbeb";
+             //"3212345321767156543513212617712-32123453217671654351321247"
+double noteSpeed[]={1,1.5,1,1.5,1,1.5,1,0.8,0.8,0.6,
+                    1,1.5,1,1.5,1,0.8,0.8,0.6,1,1.5,
+                    1,1.5,1,1.5,1,1.5,1,1.5,1,1,1,2,
+                    1,1.5,1,1.5,1,0.8,0.8,0.6,1,1.5,1,1.5,1,0.8,0.8,0.6,
+                    1,1.5,1,1.5,0.8,0.8,0.8,1,1.5,1,2};
 
 /*
  *  
@@ -65,26 +71,29 @@ void setup() {
   digitalWrite(A3, HIGH);
   lcd.begin(16, 2);              // start the library
   lcd.setCursor(0, 0);
-  lcd.print(tempo);
+  //lcd.print(tempo);
 }
 
 void loop() {
   keyscan();
   if(!digitalRead(BUTTON1))    
     {
-      lcd.setCursor(1,0);
+      lcd.clear();
+      lcd.setCursor(0,1);
       lcd.print("Recording");
       record=true;
     }
     if(!digitalRead(BUTTON2))    
     {
-      lcd.setCursor(1,0);
+      lcd.clear();
+      lcd.setCursor(0,1);
       lcd.print("No Recording");
       record=false;
     }
     if(!digitalRead(BUTTON3))    
     {
-      lcd.setCursor(1,0);
+      lcd.clear();
+      lcd.setCursor(0,1);
       lcd.print("Playing");
       for(int i=0; i<count; i++)
       {
@@ -95,7 +104,7 @@ void loop() {
     if(!digitalRead(BUTTON4))
     {
       lcd.setCursor(0,0);
-      lcd.print("little Star");
+      lcd.print("Les Miserables");
       playSong();
     }
     
@@ -301,7 +310,7 @@ bool keyscan( )
     digitalWrite(A3, HIGH);
     voice = 3; //H
     lcd.clear();
-    lcd.setCursor(0, 12);
+    lcd.setCursor(12,0);
     lcd.print("HIGH");
     Col = 4; Row = 1;
 
@@ -314,7 +323,7 @@ bool keyscan( )
     voice = 2; //M
     
     lcd.clear();
-    lcd.setCursor(0, 10);
+    lcd.setCursor(10,0);
     lcd.print("MIDDLE");
     Col = 4; Row = 2;
 
@@ -327,7 +336,7 @@ bool keyscan( )
     voice = 1; //L
 
     lcd.clear();
-    lcd.setCursor(0, 13);
+    lcd.setCursor(13,0);
     lcd.print("LOW");
     Col = 4; Row = 3;
 
@@ -341,7 +350,7 @@ bool keyscan( )
     voice = 0; //Z
 
     lcd.clear();
-    lcd.setCursor(0, 13);
+    lcd.setCursor(12,0);
     lcd.print("MUTE");
 
     Col = 4; Row = 4;
@@ -353,9 +362,10 @@ bool keyscan( )
 void playSong() {
     lcd.setCursor(0, 1);
 lcd.print("Playing a Song.");
-  for (int i = 0; i < 14; i++) {
+  for (int i = 0; i < 59; i++) {
     playNote(speakerPin, sheet[i], tempo*noteSpeed[i], voice);
-  }
+  } 
+  lcd.clear();
 }
 
 void addNote(char c) {
@@ -368,7 +378,7 @@ void playNote(int OutputPin, char note, unsigned long duration, int select) {
   if (note == '-') {
     delay(duration);
   }
-  for (int i = 0; i < 7; i++) {
+  for (int i = 0; i < 8; i++) {
     if (names[i] == note) {
       tone(OutputPin, tones[i]*select, duration);
       delay(duration);
