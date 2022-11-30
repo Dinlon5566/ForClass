@@ -32,17 +32,7 @@ void setup() {
 
 // the loop function runs over and over again forever
 void loop() {
-  lcd.setCursor(0, 0);
-  twoP(M);
-  lcd.print("/");
-  twoP(RTC.getday());
-  lcd.print("   ");
-  twoP(RTC.gethours());
-  lcd.print(":");
-  twoP(RTC.getminutes());
-  lcd.print(":");
-  twoP(RTC.getseconds());
-
+  showTime();
   if (!digitalRead(BUTTON1))
   {
     C_seconds = 0;
@@ -61,12 +51,12 @@ void loop() {
   {
     int mscounter = 0;
     while (timeMode) {
-
+      showTime();
       if (cont) {
         lcd.setCursor(8, 1);
         lcd.print("Counting");
         delay(10);
-        mscounter += 13;
+        mscounter += 17;
       } else if (CF) {
         C_seconds = 0;
         C_minutes = 0;
@@ -78,12 +68,12 @@ void loop() {
         lcd.setCursor(8, 1);
         lcd.print("    Stop");
       }
-     C_seconds=mscounter/1000;
-     C_minutes= C_seconds/60;
-     C_hours=C_minutes/60;
-     C_seconds%=60;
-     C_minutes%=60;
-      
+      C_seconds = mscounter / 1000;
+      C_minutes = C_seconds / 60;
+      C_hours = C_minutes / 60;
+      C_seconds %= 60;
+      C_minutes %= 60;
+
       printTime(C_hours, C_minutes, C_seconds);
       if (!digitalRead(BUTTON4)) {
         CF = 0;
@@ -95,10 +85,13 @@ void loop() {
         cont = 0;
         delay(300);
       }
+      if (!digitalRead(BUTTON3)) {
+      timeMode = 0;
+      lcd.clear();
+      break;
     }
-    if (!digitalRead(BUTTON3)){
-        timeMode=0;
-      }
+    }
+    
 
   }
 
@@ -118,4 +111,17 @@ void twoP(int n) {
     lcd.print("0");
   }
   lcd.print(n);
+}
+void showTime() {
+  lcd.setCursor(0, 0);
+  twoP(M);
+  lcd.print("/");
+  twoP(RTC.getday());
+  lcd.print("   ");
+  twoP(RTC.gethours());
+  lcd.print(":");
+  twoP(RTC.getminutes());
+  lcd.print(":");
+  twoP(RTC.getseconds());
+
 }
