@@ -47,7 +47,6 @@ class Solution:
                 result.append(solFuntion(EqFuntion,i,i+step,EPS))
 
         return result
-    
 
     def lineEq(self,function,a,b):
         # find the line equation
@@ -59,12 +58,17 @@ def main():
     eq=Equation()
     sol=Solution()
 
-    if False:
-        num=-2.2503033390859675
-        print(format(eq.f1(num),'.15f'))
-    F1s=sol.findSolution(eq.f1,sol.falsePostion,-100,100,0.1)
-    for i in F1s:
-        print(format(i,'.15f'))
+    # Set values here
+    left=-10
+    right=10
+    step=0.1
+    EPS=0.000000001
+
+    for f in eq.functions:
+        print("The roots of the function are: ")
+        result=sol.findSolution(f,sol.falsePostion,left,right,step,EPS)
+        print(result)
+
 
 if __name__ == '__main__':
     main()
