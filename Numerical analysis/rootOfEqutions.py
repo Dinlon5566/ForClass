@@ -28,9 +28,7 @@ class Solution:
         x1 = a+function(a)*(b-a)/(function(a)-function(b))
         Fx1 = function(x1)
 
-        if (Fx1 == 0):
-            return x1
-        elif (abs(Fx1) < EPS):
+        if (abs(Fx1) < EPS):
             return x1
         elif (Fx1*Fa < 0):
             return self.falsePostion(function, a, x1, EPS)
@@ -40,17 +38,15 @@ class Solution:
     def modiyFalsePostion(self, function, a, b, EPS=0.00001):
         # find the value of f(a),f(b)
         Fa = function(a)
-        Fb = function(b)
+        Fb = function(b)/2
 
         if (Fa*Fb > 0):
             raise ValueError("The function has no root in the interval")
 
-        x1 = a+function(a)*(b-a)/(function(a)-function(b))
+        x1 = a+Fa*(b-a)/(Fa-Fb)
         Fx1 = function(x1)
 
-        if (Fx1 == 0):
-            return x1
-        elif (abs(Fx1) < EPS):
+        if (abs(Fx1) < EPS):
             return x1
         elif (Fx1*Fa < 0):
             return self.falsePostion(function, x1, a, EPS)
@@ -69,9 +65,8 @@ class Solution:
 
         x1 = (a+b)/2
         Fx1 = function(x1)
-        if (Fx1 == 0):
-            return x1
-        elif (abs(Fx1) < EPS):
+        
+        if (abs(Fx1) < EPS):
             return x1
         elif (Fx1*Fa < 0):
             return self.bisectionMethod(function, a, x1, EPS)
@@ -98,22 +93,42 @@ class Solution:
 
         return result
 
-
 def main():
     eq = Equation()
     sol = Solution()
 
     # Set values here
-    left = -100
-    right = 100
+    left = -50      
+    right = 50
     step = 0.1
-    EPS = 0.000001
-    method = sol.falsePostion
+    EPS = 0.01
 
+    print('\nSolution by Bisection Method:')
+    method = sol.bisectionMethod
+    t=1
     for f in eq.functions:
-        print("The roots of the function by are: ")
         result = sol.findSolution(f, method, left, right, step, EPS)
-        print(result)
+        print('function ',t,':\n',result)
+        t+=1
+    
+
+    print('\nSolution by False Position Method:')
+    method = sol.falsePostion
+    t=1
+    for f in eq.functions:
+        result = sol.findSolution(f, method, left, right, step, EPS)
+        print('function ',t,':\n',result)
+        t+=1
+
+    print('\nSolution by Modified False Position Method:')
+    method = sol.modiyFalsePostion
+    t=1
+    for f in eq.functions:
+        result = sol.findSolution(f, method, left, right, step, EPS)
+        print('function ',t,':\n',result)
+        t+=1
+
+
 
 
 if __name__ == '__main__':
