@@ -12,6 +12,7 @@ class Equation:
 
     def f2(self, x):
         return 1+x**2-math.tan(x)
+    
 
     def df1(self, x):
         return math.e**x-5.6*(math.sin(x)+x*math.cos(x))+3.2
@@ -26,8 +27,10 @@ class Equation:
 
 
 class Solution:
+    def __init__(self) -> None:
+        self.methods = [self.falsePostion, self.bisectionMethod, self.newtonMethod, self.secantMethod]
+
     def falsePostion(self, function, a, b, EPS=0.00001):
-        # find the value of f(a),f(b)
         Fa = function(a)
         Fb = function(b)
 
@@ -45,7 +48,6 @@ class Solution:
             return self.falsePostion(function, x1, b, EPS)
 
     def modiyFalsePostion(self, function, a, b, EPS=0.00001):
-        # find the value of f(a),f(b)
         Fa = function(a)
         Fb = function(b)/2
 
@@ -63,7 +65,6 @@ class Solution:
             return self.falsePostion(function, x1, b, EPS)
 
     def bisectionMethod(self, function, a, b, EPS=0.00001):
-        # find the value of f(a),f(b)
         Fa = function(a)
         Fb = function(b)
 
@@ -94,6 +95,29 @@ class Solution:
         Df=eq.dfunctions[function.__name__]
         return self.newtonMethod_(function,Df, (a+b)/2, EPS)
         
+    def secantMethod(self, function, x0, x1, EPS):
+        f0 = function(x0)
+        f1 = function(x1)
+
+        if abs(f1) < EPS:
+            return x1
+
+        try:
+            x2 = x1 - f1*(x1 - x0)/(f1 - f0)
+        except ZeroDivisionError:
+            raise ValueError("Divided by zero")
+
+        return self.secantMethod(function, x1, x2, EPS)
+
+    def fixedPointMethod_(self, function, x, EPS=0.00001):
+        Fx = function(x)
+        while abs(Fx-x) > EPS:
+            x = Fx
+            Fx = function(x)
+        return x
+    
+    def fixedPointMethod(self, function, a, b, EPS=0.00001):
+        return self.fixedPointMethod_(function, (a+b)/2, EPS)
 
     def findSolution(self, EqFuntion, solFuntion, left, right, step=0.1, EPS=0.00001):
         if left > right:
@@ -112,9 +136,24 @@ class Solution:
                     result.append(i)
             except RecursionError:
                 RecursionErrorTimes += 1
+            except OverflowError:
+                result.append('')
 
         return result
 
+def solutionFunction(function, method, left, right, step, EPS):
+    sol = Solution()
+    print('f(x) : ', function.__name__)
+    print('method : ', method.__name__)
+    result = sol.findSolution(function, method, left, right, step, EPS)
+    checkResult(function, result)
+
+def checkResult(function, result):
+    for i in result:
+        print('f(', i, ') = ', function(i))
+        if abs(function(i)) > 0.00001:
+            print('Error!')
+    print('Correct!')
 
 def main():
     eq = Equation()
@@ -123,32 +162,12 @@ def main():
     # Set values here
     left = -50
     right = 50
-    step = 0.0001
+    step = 0.01
     EPS = 0.0000001
 
-    print('\nSolution by Bisection Method:')
-    method = sol.bisectionMethod
-    t = 1
-    for f in eq.functions:
-        result = sol.findSolution(f, method, left, right, step, EPS)
-        print('function ', t, ':\n', result)
-        t += 1
-
-    print('\nSolution by False Position Method:')
-    method = sol.falsePostion
-    t = 1
-    for f in eq.functions:
-        result = sol.findSolution(f, method, left, right, step, EPS)
-        print('function ', t, ':\n', result)
-        t += 1
-
-    print('\nSolution by newtonMethod :')
-    method = sol.newtonMethod
-    t = 1
-    for f in eq.functions:
-        result = sol.findSolution(f, method, left, right, step, EPS)
-        print('function ', t, ':\n', result)
-        t += 1
+    for method in sol.methods:
+        for function in eq.functions:
+            solutionFunction(function, method, left, right, step, EPS)
 
 
 if __name__ == '__main__':
