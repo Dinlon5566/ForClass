@@ -12,23 +12,23 @@ class Equation:
 
     def f2(self, x):
         return 1+x**2-math.tan(x)
-    
 
     def df1(self, x):
         return math.e**x-5.6*(math.sin(x)+x*math.cos(x))+3.2
-    
+
     def df2(self, x):
         return 2*x-1/(math.cos(x)**2)
-        
+
     def __init__(self) -> None:
         self.functions = [self.f1, self.f2]
         self.dfunctions = {'f1': self.df1, 'f2': self.df2}
-        
 
 
 class Solution:
     def __init__(self) -> None:
-        self.methods = [self.falsePostion, self.bisectionMethod, self.newtonMethod, self.secantMethod]
+        self.methods = [self.falsePostion, self.modiyFalsePostion, self.bisectionMethod,
+                        self.newtonMethod, self.secantMethod, self.fixedPointMethod]
+        self.tmp_methods = [self.fixedPointMethod]
 
     def falsePostion(self, function, a, b, EPS=0.00001):
         Fa = function(a)
@@ -81,7 +81,7 @@ class Solution:
         else:
             return self.bisectionMethod(function, x1, b, EPS)
 
-    def newtonMethod_(self, function,Df, x, EPS=0.00001):
+    def newtonMethod_(self, function, Df, x, EPS=0.00001):
         Fx = function(x)
         while abs(Fx) > EPS:
             if abs(Df(x)) < EPS:
@@ -91,10 +91,10 @@ class Solution:
         return x
 
     def newtonMethod(self, function, a, b, EPS=0.00001):
-        eq=Equation()
-        Df=eq.dfunctions[function.__name__]
-        return self.newtonMethod_(function,Df, (a+b)/2, EPS)
-        
+        eq = Equation()
+        Df = eq.dfunctions[function.__name__]
+        return self.newtonMethod_(function, Df, (a+b)/2, EPS)
+
     def secantMethod(self, function, x0, x1, EPS):
         f0 = function(x0)
         f1 = function(x1)
@@ -110,12 +110,19 @@ class Solution:
         return self.secantMethod(function, x1, x2, EPS)
 
     def fixedPointMethod_(self, function, x, EPS=0.00001):
-        Fx = function(x)
-        while abs(Fx-x) > EPS:
-            x = Fx
-            Fx = function(x)
-        return x
-    
+        y = function(x)
+        t = 0
+        while abs(y-x) > EPS:
+            x = y
+            try:
+                y = function(x)
+            except OverflowError:
+                return None
+            t += 1
+            if t > 1000:
+                return None
+        return y
+
     def fixedPointMethod(self, function, a, b, EPS=0.00001):
         return self.fixedPointMethod_(function, (a+b)/2, EPS)
 
@@ -136,24 +143,30 @@ class Solution:
                     result.append(i)
             except RecursionError:
                 RecursionErrorTimes += 1
-            except OverflowError:
-                result.append('')
 
         return result
+
 
 def solutionFunction(function, method, left, right, step, EPS):
     sol = Solution()
     print('f(x) : ', function.__name__)
     print('method : ', method.__name__)
     result = sol.findSolution(function, method, left, right, step, EPS)
-    checkResult(function, result)
+    checkResult(function, result, EPS)
 
-def checkResult(function, result):
+
+def checkResult(function, result, EPS):
+    f = 0
     for i in result:
+        if i is None:
+            continue
         print('f(', i, ') = ', function(i))
-        if abs(function(i)) > 0.00001:
+        if abs(function(i)) > EPS:
             print('Error!')
-    print('Correct!')
+            f = 1
+    if f == 0:
+        print('Correct!')
+
 
 def main():
     eq = Equation()
