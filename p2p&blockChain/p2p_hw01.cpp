@@ -67,6 +67,7 @@ void createTopology(vector<Node> &nodeList, vector<uint32_t> &idList)
         nodeList.push_back(tid);
     }
 
+    // sort by id
     sort(idList.begin(), idList.end());
     sort(nodeList.begin(), nodeList.end());
 
@@ -110,9 +111,11 @@ void createTopology(vector<Node> &nodeList, vector<uint32_t> &idList)
 void mapKeysToPeers(vector<Node> &nodeList, vector<uint32_t> &idList)
 {
     int count[n];
-    if (DEBUG && false)
+
+    if (DEBUG)  // print idList
         for (uint32_t i : idList)
             cout << i << " ";
+
     // i : 10, 20, 30, ..., 100 (numK)
     for (int i = 10; i <= 100; i = i + 10)
     {
@@ -127,7 +130,7 @@ void mapKeysToPeers(vector<Node> &nodeList, vector<uint32_t> &idList)
             }
             count[index]++;
 
-            if (DEBUG && false)
+            if (DEBUG)
             {
                 if (count[index] > 1000)
                 {
@@ -136,7 +139,7 @@ void mapKeysToPeers(vector<Node> &nodeList, vector<uint32_t> &idList)
             }
         }
 
-        if (DEBUG && false)
+        if (DEBUG)
         {
             for (int p = 0; p < n; p++)
             {
@@ -159,9 +162,8 @@ void mapKeysToPeers(vector<Node> &nodeList, vector<uint32_t> &idList)
 void computeSearchHops(vector<Node> &nodeList, vector<uint32_t> &idList)
 {
     int hops[32];
-    int err = 0;
-    int doNothing = 0;
     memset(hops, 0, sizeof(hops));
+
     for (int i = 0; i < n; i++)
     {
         // Each node is the initiator of 100 searches
@@ -177,16 +179,10 @@ void computeSearchHops(vector<Node> &nodeList, vector<uint32_t> &idList)
 
             Node *targetNode = &nodeList[targetNodeIndex];
             Node *currentNode = &nodeList[i];
+            
             while (currentNode->id != targetNode->id)
             {
                 hop++;
-
-                if (hop >= 32)
-                {
-                    doNothing++;
-                    err++;
-                    break;
-                }
 
                 // find by finger table
                 uint32_t dif = targetNode->id - currentNode->id;
@@ -201,9 +197,6 @@ void computeSearchHops(vector<Node> &nodeList, vector<uint32_t> &idList)
     {
         cout << hops[i] << " ";
     }
-    cout << endl
-         << "ErrorTime: " << err << endl;
-    cout << "doNothing: " << doNothing << endl;
 }
 
 int main()
@@ -218,7 +211,7 @@ int main()
 
     if (DEBUG)
     {
-        // show nodeList[0]'s finger table
+        // show nodeList[mid]'s finger table
         Node *tn = &nodeList[n / 2];
         cout << tn->predecessor->id << " <- " << tn->id << " -> " << tn->successor->id << endl;
         for (int i = 0; i < 32; i++)
@@ -226,5 +219,6 @@ int main()
             cout << i << " " << tn->id + (1 << i) << ":" << tn->fingerTable[i]->id << endl;
         }
     }
+
     return 0;
 }
