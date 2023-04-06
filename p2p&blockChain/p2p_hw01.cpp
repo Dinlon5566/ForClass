@@ -198,8 +198,6 @@ void computeSearchHops(vector<Node> &nodeList, vector<uint32_t> &idList)
 
                 // find by finger table
                 uint32_t dif = targetNode->id - currentNode->id;
-                if (dif < 0)
-                    dif += 1 << 32;
                 int index = 31 - __builtin_clz(dif);
                 currentNode = currentNode->fingerTable[index];
             }
