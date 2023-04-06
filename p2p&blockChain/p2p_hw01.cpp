@@ -30,14 +30,6 @@ public:
     {
         return id < tNode.id;
     }
-    bool operator>(const Node &tNode) const
-    {
-        return id > tNode.id;
-    }
-    bool operator==(const Node &tNode) const
-    {
-        return id == tNode.id;
-    }
 
     static uint32_t getUniqueID(vector<uint32_t> &exists)
     {
