@@ -21,7 +21,7 @@ private:
             sum += std::pow(lambda / mu, n) / factorial(n);
         }
         /*
-                不考慮容量 k= limit
+                //不考慮容量 k= limit
                 double lastTerm = std::pow(lambda / mu, S) / (factorial(S) * (1 - rho));
 
                 sum += lastTerm;
@@ -80,18 +80,22 @@ public:
 
     double L()
     {
-        double L = 0.0;
-        for (int n = 0; n <= K; ++n)
+        double sum = 0.0;
+        double sum2 = 0.0;
+        for (int n = 0; n < S; n++)
         {
-            L += n * stateProbabilities[n];
+            double temp = stateProbabilities[n];
+            sum += n * temp;
+            sum2 += temp;
         }
-        return L;
+        sum2 = S * (1 - sum2);
+        return Lq()+sum+sum2;
     }
-
+    
     double Lq()
     {
         double Lq = 0.0;
-        for (int n = S; n <= K; ++n)
+        for (int n = S; n <= K; n++)
         {
             Lq += (n - S) * stateProbabilities[n];
         }
@@ -112,6 +116,20 @@ public:
     {
         return Lq() / lambdaEff();
     }
+
+    //debug
+    void printAllValue()
+    {
+        std::cout << "P0: " << calculateP0() << std::endl;
+        std::cout << "rho: " << rho << std::endl;
+        std::cout << "stateProbabilities: " << std::endl;
+        for (int i = 0; i < stateProbabilities.size(); i++)
+        {
+            std::cout << stateProbabilities[i] << std::endl;
+        }
+        std::cout << std::endl;
+    }
+
 };
 
 class SimulationQueueingSystem
@@ -232,7 +250,7 @@ public:
     {
         if (totalServedCustomers > 0)
         {
-            return totalWaitTime / totalServedCustomers;
+            return (totalWaitTime / totalServedCustomers)/60;
         }
         return 0.0;
     }
@@ -241,7 +259,7 @@ public:
     {
         if (totalServedCustomers > 0)
         {
-            return totalQueueWaitTime / totalServedCustomers;
+            return (totalQueueWaitTime / totalServedCustomers)/60;
         }
         return 0.0;
     }
@@ -259,8 +277,8 @@ public:
 int main()
 {
     int s = 3, k = 8;
-    double mu = 35;
-    double simulationTime = 1000.0; // 設定模擬時間，這可以根據需要進行調整
+    double mu = 40;
+    double simulationTime = 100000.0; // 設定模擬時間，這可以根據需要進行調整
 
     std::ofstream outputFile("queueing_system_results.csv");
     outputFile << "Lambda,L,Lq,W,Wq,SimulatedL,SimulatedLq,SimulatedW,SimulatedWq\n";
@@ -277,7 +295,7 @@ int main()
         double Lq = queueSystem.Lq();
         double W = queueSystem.W();
         double Wq = queueSystem.Wq();
-
+        queueSystem.printAllValue();
         // simulate
         double simulatedL = simQueueSystem.L();
         double simulatedLq = simQueueSystem.Lq();
