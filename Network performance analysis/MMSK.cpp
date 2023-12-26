@@ -139,8 +139,8 @@ private:
     int S, K;          // 服務台數量和系統容量
     double mu, lambda; // 服務率和到達率 HR^-1
     std::default_random_engine generator;
-    std::exponential_distribution<double> arrivalDistribution; // 柏松分佈
-    std::exponential_distribution<double> serviceDistribution; // 柏松分佈
+    std::exponential_distribution<double> arrivalDistribution; 
+    std::exponential_distribution<double> serviceDistribution;
 
     double totalWaitTime;      // 所有顧客的總等待時間
     double totalQueueWaitTime; // 所有顧客在隊列中的總等待時間
